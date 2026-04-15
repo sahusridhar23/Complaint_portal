@@ -1,4 +1,3 @@
-<footer>This is footer</footer>
 <!doctype html>
 <html lang="en">
   <head>
@@ -9,16 +8,16 @@
   <body>
     <!-- HEADER -->
     <header>
-      <h1>Complaint Portal</h1>
+      <a class="logo" href="index.html">
+        <div class="logo-badge">SU</div>
+        <div class="logo-text">
+          <b>Silicon University</b>
+          <small>Complaint Portal</small>
+        </div>
+      </a>
       <nav>
-        <ul>
-          <li>
-            <a href="./index.html">Dashboard</a>
-          </li>
-          <li>
-            <a href="./add.html">Raise Complaint</a>
-          </li>
-        </ul>
+        <a href="index.html">Dashboard</a>
+        <a href="add.html">New Complaint</a>
       </nav>
     </header>
     <hr />
@@ -26,10 +25,45 @@
     <!-- MAIN -->
     <main>
       <h2>Raise Complaint</h2>
-      This is main body
+      <form>
+        <div>
+          <label for="firstname">Name</label>
+          <input id="firstname" type="text" placeholder="Enter first name" />
+        </div>
+        <div>
+          <label for="category">Category</label>
+          <select name="category" id="category">
+            <option value="">-- Select Category --</option>
+            <option value="hostel">Hostel</option>
+            <option value="academic">Academic</option>
+            <option value="canteen">Canteen</option>
+            <option value="gym">Gym</option>
+            <option value="infrastructure">Infrastructure</option>
+          </select>
+        </div>
+        <div>
+          <label for="Title">Title</label>
+          <input id="Title" type="text" placeholder="complaint title" />
+        </div>
+
+        <div>
+          <label for="Description">Description</label><br />
+          <textarea
+            id="Description"
+            rows="10"
+            cols="40"
+            placeholder="Briefly describe the issue"
+          ></textarea>
+        </div>
+        <button type="submit">submit complaint</button>
+      </form>
     </main>
     <hr />
 
     <!-- FOOTER -->
+    <footer>
+      <h4>2026 Silicon University | m1 complaint portal</h4>
+      <p><em>&copy;All rights reserved</em></p>
+    </footer>
   </body>
 </html>
