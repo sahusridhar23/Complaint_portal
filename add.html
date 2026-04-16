@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard</title>
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <!-- HEADER -->
@@ -25,11 +26,19 @@
     <!-- MAIN -->
     <main>
       <h2>Raise Complaint</h2>
-      <form>
-        <div>
+      <!-- //# - submit to the samepage for timebeing , later to be used in backend -->
+      <form action="#" method="post">
+        <!-- name -->
+        <div class="form-group">
           <label for="firstname">Name</label>
-          <input id="firstname" type="text" placeholder="Enter first name" />
+          <input
+            name="name"
+            id="firstname"
+            type="text"
+            placeholder="Enter first name"
+          />
         </div>
+        <!-- category -->
         <div>
           <label for="category">Category</label>
           <select name="category" id="category">
@@ -41,14 +50,21 @@
             <option value="infrastructure">Infrastructure</option>
           </select>
         </div>
+        <!-- title -->
         <div>
           <label for="Title">Title</label>
-          <input id="Title" type="text" placeholder="complaint title" />
+          <input
+            name="title"
+            id="Title"
+            type="text"
+            placeholder="complaint title"
+          />
         </div>
-
+        <!-- description -->
         <div>
           <label for="Description">Description</label><br />
           <textarea
+            name="description"
             id="Description"
             rows="10"
             cols="40"
