@@ -1,33 +1,266 @@
-body {
-  font-family: Arial;
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-header {
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #eef4ff;
+  color: #1a1a2e;
+  line-height: 1.6;
+}
+
+/* ---------- Header / Navbar ---------- */
+.site-header {
+  background-color: #1e40af;
+  padding: 15px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-shadow: 0 2px 6px #00000033;
+  flex-wrap: wrap;
+  gap: 16px;
 }
 
-/* form */
-form {
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.brand-logo {
+  width: 45px;
+  height: 45px;
+  border-radius: 8px;
+  object-fit: contain;
+  background-color: #f5f4ef;
+  padding: 4px;
+  flex-shrink: 0;
+}
+
+.brand-text {
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  width: 300px;
+  line-height: 1.2;
 }
 
-/* complaint list */
+.brand-title {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.brand-sub {
+  color: #cbd5e1;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+}
+
+.site-nav a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: bold;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.site-nav a:hover,
+.site-nav a.active {
+  background-color: #facc15;
+  color: #1e40af;
+}
+
+/* ---------- Main ---------- */
+.site-main {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+.site-main h2 {
+  color: #1e40af;
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.site-main > p.lead {
+  color: #475569;
+  margin-bottom: 25px;
+}
+
+/* ---------- Complaint cards ---------- */
 .complaint-list {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 18px;
 }
 
-/* card */
 .complaint-card {
-  border: 1px solid #ccc;
-  padding: 15px;
-  border-radius: 8px;
+  background-color: #ffffff;
+  border-left: 6px solid #1e40af;
+  border-radius: 10px;
+  padding: 20px 25px;
+  box-shadow: 0 2px 5px #00000014;
+  transition: box-shadow 0.2s;
 }
+
+.complaint-card:hover {
+  box-shadow: 0 4px 12px #00000026;
+}
+
+.complaint-card h3 {
+  color: #1e40af;
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.complaint-card p {
+  margin-bottom: 6px;
+  color: #334155;
+}
+
+.complaint-card p b {
+  color: #0f172a;
+}
+
+/* ---------- Status badges ---------- */
+.status {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-top: 6px;
+}
+
+.status-pending {
+  background-color: #f59e0b;
+}
+
+.status-progress {
+  background-color: #3b82f6;
+}
+
+.status-resolved {
+  background-color: #16a34a;
+}
+
+/* ---------- Form (for add.html) ---------- */
+.form-box {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px #00000022;
+  border-top: 6px solid #facc15;
+}
+
+.form-box h2 {
+  color: #1e40af;
+  margin-bottom: 5px;
+}
+
+.form-box .info {
+  color: #64748b;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #1e293b;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 2px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 15px;
+  font-family: Arial, sans-serif;
+  background-color: #f8fafc;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #1e40af;
+  outline: none;
+  background-color: #ffffff;
+}
+
+textarea {
+  height: 110px;
+  resize: vertical;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  background-color: #1e40af;
+  color: #ffffff;
+  padding: 12px 25px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.btn:hover {
+  background-color: #facc15;
+  color: #1e40af;
+}
+
+.btn-secondary {
+  background-color: #e2e8f0;
+  color: #1e293b;
+  padding: 12px 25px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+.btn-secondary:hover {
+  background-color: #cbd5e1;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  background-color: #1e40af;
+  color: #ffffff;
+  text-align: center;
+  padding: 18px;
+  margin-top: 40px;
+  font-size: 14px;
+}
+
+.site-footer h4 {
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+.site-footer a {
+  color: #facc15;
+  text-decoration: none;
+}
+
