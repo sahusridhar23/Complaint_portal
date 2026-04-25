@@ -9,6 +9,9 @@ body {
   background-color: #eef4ff;
   color: #1a1a2e;
   line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 /* ---------- Header / Navbar ---------- */
@@ -72,7 +75,9 @@ body {
   font-weight: bold;
   padding: 8px 14px;
   border-radius: 6px;
-  transition: background-color 0.2s, color 0.2s;
+  transition:
+    background-color 0.2s,
+    color 0.2s;
 }
 
 .site-nav a:hover,
@@ -86,6 +91,7 @@ body {
   max-width: 900px;
   margin: 30px auto;
   padding: 20px;
+  flex: 1;
 }
 
 .site-main h2 {
@@ -153,7 +159,9 @@ body {
   color: #ffffff;
   cursor: pointer;
   box-shadow: 0 2px 4px #00000026;
-  transition: background-color 0.2s, transform 0.1s;
+  transition:
+    background-color 0.2s,
+    transform 0.1s;
 }
 
 .delete-btn:hover {
@@ -290,4 +298,3 @@ textarea {
   color: #facc15;
   text-decoration: none;
 }
-
